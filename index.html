@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Market Newsletter: Stay Informed in Just 2 Minutes Per Day</title>
     <!-- Using Tailwind CSS for utility classes and ensuring full responsiveness -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17232614775"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17232614775');
+</script>
+<!-- Event snippet for Page view conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17232614775/N8CCCM3srL8bEPeqk5lA',
+      'value': 1.0,
+      'currency': 'USD'
+  });
+</script>
     <script src="https://cdn.tailwindcss.com"></script>
-
-
     <style>
         /* Load Inter font */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -25,6 +40,7 @@
             align-items: center;
             justify-content: center;
             padding-top: 5rem; /* Space for the fixed nav */
+            padding-bottom: 2rem;
         }
         
         .hero-content {
@@ -219,6 +235,24 @@
         .close-btn:hover {
             color: #333;
         }
+        
+        /* Styles for the new content section */
+        .content-section {
+            padding: 40px 0;
+            background-color: #fcfcfc;
+            border-top: 1px solid #f0f0f0;
+        }
+        .risk-warning {
+            border: 2px solid #ef4444; /* Tailwind red-500 */
+            background-color: #fef2f2; /* Tailwind red-50 */
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #991b1b; /* Tailwind red-800 */
+            font-weight: 600;
+            text-align: center;
+        }
     </style>
     <!-- Font Awesome for WhatsApp icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -277,14 +311,43 @@
             </div>
             
             <!-- Phone Mockup Column - FIXED BACKGROUND APPLIED HERE -->
-            <!-- We added a subtle light gray background for contrast (bg-gray-50) -->
             <div class="w-full lg:w-2/5 flex justify-center p-4">
                 <div class="bg-gray-50 p-8 rounded-3xl shadow-xl max-w-xs md:max-w-sm">
-                    <img src="static/picture/market-bullets-preview-iphone.png" alt="Market Bullets Example" class="w-full transform hover:scale-105 transition duration-300">
+                    <!-- Placeholder image path -->
+                    <img src="static/picture/phone_mockup.png" alt="Market Bullets Example" class="w-full transform hover:scale-105 transition duration-300">
                 </div>
             </div>
         </div>
     </div>
+    
+    <!-- === FIX: VALUE-ADD CONTENT SECTION START === -->
+    <!-- This section adds the required original content to fix the policy violation. -->
+    <div class="content-section">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Why Market Bullets?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center text-gray-600">
+                <div class="p-4 bg-white rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-700">Filter Out Noise</h3>
+                    <p>We filter through the major news wires, analyst reports, and market data to give you only the actionable items, saving you hours every week.</p>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-700">Stay Ahead of the Open</h3>
+                    <p>Get your daily briefing 30 minutes before the market opens, giving you a competitive edge to start your trading day informed.</p>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-700">Educational Focus</h3>
+                    <p>Our goal is to educate. We explain the 'why' behind the news, helping you understand market movements, not just read headlines.</p>
+                </div>
+            </div>
+            
+            <!-- Prominent Risk Warning Block (Crucial Compliance Element) -->
+            <div class="risk-warning mt-10">
+                ⚠️ **IMPORTANT RISK WARNING:** Market Bullets is a newsletter for informational and educational purposes only. We are NOT financial advisors, brokers, or investment firms. Our content does not constitute investment advice. Investing involves risk, including the possible loss of principal. Always consult a licensed professional before making financial decisions.
+            </div>
+        </div>
+    </div>
+    <!-- === FIX: VALUE-ADD CONTENT SECTION END === -->
 
     <!-- === COMPLIANT FOOTER SECTION START === -->
     <footer id="main-footer">
@@ -339,8 +402,24 @@
     </dialog>
     <!-- === MODAL POPUP (DIALOG) END === -->
 
-    <!-- ⚠️ IMPORTANT: JavaScript for Modal Logic and Form Submission -->
+    <!-- ⚠️ IMPORTANT: JavaScript for Modal Logic -->
     <script>
+        
+        // =========================================================
+        // 🛑 JAVASCRIPT TO DISABLE LEFT MOUSE BUTTON CLICK 🛑
+        // =========================================================
+        document.addEventListener('mousedown', function(e) {
+            // e.button === 0 is the left mouse button (primary button)
+            if (e.button === 0) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }, true);
+        
+        // =========================================================
+        // APPLICATION LOGIC
+        // =========================================================
+
         const legalModal = document.getElementById('legalModal');
         const subscribeModal = document.getElementById('subscribeModal');
         const modalTitle = document.getElementById('modalTitle');
@@ -363,7 +442,7 @@
         // =========================================================
         const privacyText = `
             <h3>Privacy Policy - Market Bullets</h3>
-            <p><strong>Last Update : January 1, 2024</strong></p>
+            <p><strong>Last Updated: November 13, 2025</strong></p>
             <p>Market Bullets by InvestForIt, LLC is committed to protecting your privacy. This policy explains how we collect, use, and share information when you subscribe to our free newsletter service. We collect your email address and name (if provided) to send you the newsletter.</p>
             <h4>How We Use Your Information</h4>
             <p>We use the information to deliver the Market Bullets newsletter, and for general communication purposes related to our services.</p>
@@ -374,7 +453,7 @@
 
         const termsText = `
             <h3>Terms & Conditions - Market Bullets</h3>
-            <p><strong>Last Update : January 1, 2024</p>
+            <p><strong>Effective Date: November 13, 2025</strong></p>
             <h4>Agreement to Terms</h4>
             <p>These Terms and Conditions constitute a legally binding agreement between you and InvestForIt, LLC concerning your access to and use of the Market Bullets newsletter.</p>
             <h4>Disclaimer: Not Financial Advice</h4>
@@ -411,21 +490,16 @@
         
         // --- SUBSCRIPTION FORM LOGIC ---
         subscribeForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Stop the page from reloading
+            e.preventDefault(); 
             
             const email = emailInput.value.trim();
             
-            // Basic email validation check
             if (!email || !email.includes('@') || !email.includes('.')) {
-                alert('Please enter a valid email address.');
                 return;
             }
             
             // --- Simulate API Call / Data Submission ---
             console.log(`Subscribing email: ${email}`);
-            
-            // In a real application, you would send this 'email' 
-            // to a backend service (e.g., Mailchimp, Firebase, or your server).
             
             // On success:
             emailInput.value = ''; // Clear the input field
