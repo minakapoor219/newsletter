@@ -1,0 +1,151 @@
+body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-content {
+    max-width: 500px;
+}
+.join-btn {
+    background-color: #3c74d4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding:1rem;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.join-btn:hover,.join-btn:active {
+    background-color: #254eda !important;
+}
+.trusted {
+    font-size: 0.9rem;
+    color: #666;
+}
+.policy {
+    font-size: 0.8rem;
+    color: #888;
+}
+.btn2 {
+    overflow: hidden; 
+    position: relative;
+}
+.btn2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0.3) 100%
+    );
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+}
+
+.btn2:hover::after {
+    left: 125%;
+}
+/* === FOOTER STYLES === */
+#main-footer {
+    background-color: #f7f7f7; /* Light gray background */
+    border-top: 1px solid #eee;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.legal-links a {
+    color: #007bff; /* Standard link color for compliance */
+    text-decoration: none;
+    margin: 0 8px;
+    cursor: pointer; /* Ensures users know it's clickable */
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    color: #ccc;
+}
+
+.address-text {
+    font-size: 12px;
+    margin-bottom: 15px !important;
+}
+
+/* === MODAL STYLES (for <dialog>) === */
+#legalModal {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    max-width: 90%;
+    width: 600px; /* Max width for readability */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+/* Style the backdrop when the modal is open */
+#legalModal::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.modal-body {
+    padding: 20px;
+    max-height: 70vh; /* Limits height to prevent modal from being too tall */
+    overflow-y: auto; /* Allows scrolling within the content */
+    line-height: 1.6;
+    color: #444;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+}
+
+.close-btn:hover {
+    color: #333;
+}
